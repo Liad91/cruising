@@ -1,0 +1,46 @@
+.main-menu {
+    .header {
+        display: flex;
+        justify-content: flex-end;
+        flex-direction: column;
+        padding: 20px;
+        height: 180px;
+        width: 100%;
+        background-color: #08c;
+
+        img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        .user-info {
+            .name {
+                color: #fff;
+            }
+    
+            .email {
+                color: #f2f2f2;
+            }
+        }
+    }
+     
+     .list-md {
+         ion-icon {
+             display: flex;
+             align-items: center;
+             font-size: 21px;
+             color: #555;
+         }
+
+        .item-block .item-inner {
+            font-size: 14px;
+            border: 0;
+        }
+
+        .item-select .label-md {
+            color: #000;
+        }
+    }
+}

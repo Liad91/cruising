@@ -1,0 +1,38 @@
+<ion-menu [content]="content">
+    <ion-content class="main-menu">
+        <div class="header">
+            <img src="assets/imgs/user.png">
+            <div class="user-info">
+                <div class="name">Liad Idan</div>
+                <div class="email">liad.idan@gmail.com</div>
+            </div>
+        </div>
+        <ion-list>
+            <button ion-item (click)="showLocation = !showLocation">
+                <ion-icon name="navigate" item-start></ion-icon>
+                <ion-label>Show my location</ion-label>
+                <ion-toggle [checked]="showLocation"></ion-toggle>  
+            </button>
+            <ion-item>
+                <ion-icon name="radio-button-on" item-start></ion-icon>
+                <ion-label>Check in radius</ion-label>
+                <ion-select [(ngModel)]="radius" interface="popover">
+                    <ion-option value="20">20 Km</ion-option>
+                    <ion-option value="40">40 Km</ion-option>
+                    <ion-option value="60">60 Km</ion-option>
+                    <ion-option value="80">80 Km</ion-option>
+                    <ion-option value="100">100 Km</ion-option>
+                </ion-select>
+            </ion-item>
+            <button ion-item>
+                <ion-icon name="map" item-start></ion-icon>
+                <ion-label>Check in route</ion-label>
+            </button>
+            <button menuToggle ion-item (click)="openNewLocation()">
+                <ion-icon name="pin" item-start></ion-icon>
+                <ion-label>Add new location</ion-label>
+            </button>
+        </ion-list>
+    </ion-content>
+</ion-menu>
+<ion-nav #content [root]="rootPage"></ion-nav>
